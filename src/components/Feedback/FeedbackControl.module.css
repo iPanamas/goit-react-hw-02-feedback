@@ -1,0 +1,11 @@
+.controlList {
+  display: flex;
+}
+
+.controlList__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.controlList__button {
+
+}
