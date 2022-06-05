@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import FeedbackOptions from './Feedback/FeedbackOptions';
-import FeedbackStatistic from './Feedback/FeedbackStatistic';
-import Section from './Section';
-import Notification from './Notification';
-import FeedbackStatistics from './Feedback/FeedbackStatistic';
+import FeedbackStatistics from './Feedback/FeedbackStatistics';
+import Section from './Section/Section';
+import Notification from './Notification/Notification';
 
 class App extends Component {
   state = {
@@ -46,16 +45,16 @@ class App extends Component {
         </Section>
 
         <Section title="Statistics">
-          {this.countTotalFeedback() === 0 ? (
-            <Notification message="There is no feedback" />
-          ) : (
-            <FeedbackStatistic
+          {this.countTotalFeedback() ? (
+            <FeedbackStatistics
               good={good}
               neutral={neutral}
               bad={bad}
               total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
+          ) : (
+            <Notification message="There is no feedback" />
           )}
         </Section>
       </>
