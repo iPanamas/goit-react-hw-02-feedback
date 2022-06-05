@@ -1,27 +1,35 @@
-const FeedbackStatistic = ({ good, neutral, bad, total, positive }) => {
+import s from './Feedback.module.css';
+
+const FeedbackStatistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
   return (
-    <div>
-      <h2>Statistics</h2>
-      <ul>
-        <li>
-          <p>Good: {good}</p>
+    <div className={s.statistics}>
+      <ul className={s.statisticsList}>
+        <li className={s.statisticsList__item}>
+          <p className={s.statisticsList__text}>Good: {good}</p>
         </li>
-        <li>
+        <li className={s.statisticsList__item}>
           <p>Neutral: {neutral}</p>
         </li>
 
-        <li>
-          <p>Bad: {bad}</p>
+        <li className={s.statisticsList__item}>
+          <p className={s.statisticsList__text}>Bad: {bad}</p>
         </li>
-        <li>
-          <p>Total: {total}</p>
+        <li className={s.statisticsList__item}>
+          <p className={s.statisticsList__text}>Total: {total}</p>
         </li>
-
-        <li>
-          <p>Positive feedback: {positive}%</p>
+        <li className={s.statisticsList__item}>
+          <p className={s.statisticsList__text}>
+            Positive feedback: {!positivePercentage ? 0 : positivePercentage}%
+          </p>
         </li>
       </ul>
     </div>
   );
 };
-export default FeedbackStatistic;
+export default FeedbackStatistics;
