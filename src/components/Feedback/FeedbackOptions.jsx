@@ -3,7 +3,7 @@ import s from './Feedback.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div className="control">
+    <div className={s.control}>
       <ul className={s.controlList}>
         {options.map(option => (
           <li key={option} className={s.controlList__item}>

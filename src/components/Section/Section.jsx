@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import s from '../Feedback/Feedback.module.css';
 
 const Section = ({ title, children }) => {
   return (
-    <section className="Section">
-      <h2 className="Section__title">{title}</h2>
+    <section className={s.section}>
+      <h2 className={s.section__title}>{title}</h2>
       {children}
     </section>
   );

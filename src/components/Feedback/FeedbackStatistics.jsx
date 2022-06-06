@@ -15,7 +15,7 @@ const FeedbackStatistics = ({
           <p className={s.statisticsList__text}>Good: {good}</p>
         </li>
         <li className={s.statisticsList__item}>
-          <p>Neutral: {neutral}</p>
+          <p className={s.statisticsList__text}>Neutral: {neutral}</p>
         </li>
 
         <li className={s.statisticsList__item}>
